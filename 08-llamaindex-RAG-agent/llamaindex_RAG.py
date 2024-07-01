@@ -1,11 +1,16 @@
 # 加载电商财报数据
 from llama_index.core import SimpleDirectoryReader
-
+import os
+ 
+# 设置环境变量
+os.environ['OPENAI_API_KEY'] = 'sk-3E59cpeoBKnvDnq4zXhQJhobNjtZ3iiSAxql8FZgxcBkXegj'
 A_docs = SimpleDirectoryReader(
-    input_files=["08-llamaindex-RAG-agent\电商B-Third Quarter 2023 Results.pdf"]
+    #input_files=["08-llamaindex-RAG-agent\电商B-Third Quarter 2023 Results.pdf"]
+    input_files=["电商B-Third Quarter 2023 Results.pdf"]
 ).load_data()
 B_docs = SimpleDirectoryReader(
-    input_files=["08-llamaindex-RAG-agent\电商B-Third Quarter 2023 Results.pdf"]
+    #input_files=["08-llamaindex-RAG-agent\电商B-Third Quarter 2023 Results.pdf"]
+    input_files=["电商B-Third Quarter 2023 Results.pdf"]
 ).load_data()
 
 
